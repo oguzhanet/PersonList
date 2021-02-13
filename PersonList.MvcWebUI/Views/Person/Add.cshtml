@@ -1,0 +1,93 @@
+﻿@model PersonList.MvcWebUI.Models.PersonAddAndUpdateViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>title</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body class="bg-light">
+
+    <div class="container">
+        <main>
+            <div class="py-5 text-center">
+                <img class="d-block mx-auto mb-4" src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
+                <h2>Kişi Listesi</h2>
+                <p class="lead">Kişi Ekleme ve Güncelleme</p>
+            </div>
+
+            <div class="row g-3">
+                <div class="col-md-5 col-lg-4 order-md-last">
+
+                </div>
+                <div class="col-md-7 col-lg-12">
+                    <h4 class="mb-3">Billing address</h4>
+                    @using (Html.BeginForm())
+                    {
+
+
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <label for="firstName" class="form-label">İsim</label>
+                                <input type="text" class="form-control" id="firstName" name="person.firstName" placeholder="" value="">
+                            </div>
+
+                            <div class="col-sm-6">
+                                <label for="lastName" class="form-label">Soyisim</label>
+                                <input type="text" class="form-control" id="lastName" name="person.lastName" placeholder="" value="">
+
+                            </div>
+
+                            <div class="col-12">
+                                <label for="tcNo" class="form-label">Tc Kimlik Numarası</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"></span>
+                                    <input type="text" class="form-control" id="tcNo" name="person.tcNo" placeholder="Tc kimlik numaranız">
+
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" name="person.email" placeholder="you@example.com">
+
+                            </div>
+
+                            <div class="col-12">
+                                <label for="dateOfBirth" class="form-label">Doğum Tarihi</label>
+                                <input type="text" class="form-control" id="dateOfBirth" name="person.dateOfBirth" placeholder="11.08.1998">
+                            </div>
+
+                            <div class="col-12">
+                                <label for="address" class="form-label">Adres Bilgileri</label>
+                                <input type="text" class="form-control" id="address" name="person.address" placeholder="Seyitnizam Mahallesi 2/5">
+
+                            </div>
+
+                        </div>
+
+                        <hr class="my-4">
+
+                        <button class="w-100 btn btn-primary btn-lg" type="submit">Ekle</button>
+                     }
+                </div>
+            </div>
+        </main>
+
+        <footer class="my-5 pt-5 text-muted text-center text-small">
+            <p class="mb-1">&copy; 2021 Company Name</p>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Privacy</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">Support</a></li>
+            </ul>
+        </footer>
+    </div>
+
+</body>
+</html>
